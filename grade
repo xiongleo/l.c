@@ -1,0 +1,16 @@
+n=int(input())
+n_list=[]
+s_list=[]
+sc_list=[]
+for i in range(n):
+    name=input()
+    for j in range(3):
+        score=float(input())
+        sc_list.append(score)
+    n_list.append(name)
+    s_list.append(sc_list)
+    sc_list=[]
+g_list=dict(zip(n_list,s_list))
+print(g_list)
+highest=sum(max(g_list.values()))
+print(highest)
